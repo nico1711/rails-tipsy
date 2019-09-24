@@ -11,6 +11,8 @@ Ingredient.destroy_all
 
 doses = ["50 ml", "75 ml", "100 ml", "150 ml", "175 ml", "225 ml", "250 ml"]
 
+drink_name_list = ["155 Belmont", "9 1/2 Weeks", "A Gilligan's Island", "A True Amaretto Sour", "Abbey Martini", "Addington", "Addison Special", "Afterglow"]
+
 url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
 
 file = open(url).read
@@ -23,7 +25,7 @@ end
 
 21.times do
   puts "Starting created!"
-  name = Faker::Beer.hop
+  name = drink_name_list.sample
   cocktail = Cocktail.create(name: name)
   url = "https://source.unsplash.com/random?cocktail"
   puts "Waiting for unsplash to refresh search"
