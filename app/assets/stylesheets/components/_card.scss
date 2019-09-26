@@ -1,6 +1,10 @@
 .card img {
   height: 15rem;
   object-fit: cover;
+
+  &.img-contain {
+    object-fit: contain;
+  }
 }
 
 .card {
@@ -28,4 +32,23 @@
 
 .card:hover .card-info {
   opacity: 0.9;
+}
+
+.card-body {
+  a {
+    color: red;
+    font-size: 3vh;
+    text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.78);
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+}
+
+@media (max-width: 768px) {
+  .show-card {
+    width: 45%;
+  }
 }

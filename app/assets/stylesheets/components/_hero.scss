@@ -3,5 +3,23 @@
   background-image: url('https://res.cloudinary.com/nico1711/image/upload/v1565344790/background-bar.jpg');
   background-size: cover;
   height: 100vh;
-  padding: 22vh 64vh 0vh 20vh;
+  padding: 22% 25% 0% 25%;
 }
+
+@media (max-width: 1024px) {
+  .hero {
+    padding: 22% 15% 0% 15%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 50% 5% 0% 5%;
+
+    &.small {
+      padding-top: 16%;
+    }
+  }
+}
+
+

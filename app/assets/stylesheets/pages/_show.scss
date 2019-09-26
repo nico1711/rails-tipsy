@@ -1,0 +1,27 @@
+.container {
+  min-height: 75vh;
+}
+
+.show-info {
+  display: flex;
+}
+
+.show-ing {
+  width: 50%;
+  padding-left: 3rem;
+}
+
+@media (max-width: 480px) {
+  .show-info {
+    display: block;
+
+    .show-card {
+      width: 100%;
+    }
+  }
+
+  .show-ing {
+    width: 100%;
+    padding-left: 0;
+  }
+}

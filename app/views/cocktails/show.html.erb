@@ -1,0 +1,39 @@
+<div class="hero small h-100 pl-0 pr-0">
+  <div class="container justify-content-center show-info">
+      <div class="show-card text-center p-3">
+        <h2><%= @cocktail.name %></h3>
+        <div class="card">
+          <%= cl_image_tag @cocktail.photo, class: "img-contain" %>
+        </div>
+      </div>
+      <div class="show-ing">
+        <h3 class="card-title text-center">Ingredients</h5>
+        <% if @doses.any? %>
+          <div class="overflow-auto h-40">
+            <% @doses.each do |d| %>
+              <div class="card mb-3">
+                <div class="card-body d-flex justify-content-between">
+                  <p class="mb-0 pl-3"><%= d.description %> of <%= d.ingredient.name %></p>
+                  <%= link_to "", dose_path(d) , class: "fas fa-times-circle pr-3", method: :delete, data: {confirm: 'are you sure?'} %>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        <% else %>
+        <div class="card mb-3 card-body">
+          <p class="mb-0 text-center">NO INGREDIENTS ADDED YET!</p>
+        </div>
+        <% end %>
+
+      <!-- ADD NEW DOSE FORM -->
+          <div class="">
+            <h3 class="card-title text-center">Add new dose</h3>
+            <%= simple_form_for [@cocktail, @dose] do |d| %>
+              <%= d.input :description %>
+              <%= d.association :ingredient %>
+              <%= d.submit class: "btn-tipsy w-100 small" %>
+            <% end %>
+          </div>
+      </div>
+  </div>
+</div>

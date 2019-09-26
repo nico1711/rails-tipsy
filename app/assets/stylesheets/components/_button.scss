@@ -6,7 +6,7 @@
 }
 
 
-button {
+button, .btn-tipsy {
   position:relative;
   padding: 10px 20px;
   border: none;
@@ -26,7 +26,11 @@ button {
   overflow: hidden;
 }
 
-button:focus {
+.btn-tipsy.small {
+  font-size: 3vh;
+}
+
+button:focus, .btn-tipsy:hover {
   outline-color: transparent;
   box-shadow: var(--btn-color) 2px 2px 22px;
 }
