@@ -24,19 +24,23 @@ body {
   background-color: #252522;
 }
 
-h1, h2 {
+h1, h2, h3, h4, h6, label {
   font-family: 'Source Code Pro', monospace;
   color: white;
   text-transform: uppercase;
   text-shadow: 0px 0px 4px rgba(255, 203, 5, 0.78);
 }
 
-h1 {
-  font-size: 4rem;
+h1, h2 {
+  font-size: 8vh;
 }
 
-h2 {
-  font-size: 3rem;
+h3 {
+  font-size: 5vh;
+}
+
+h4 {
+  letter-spacing: 2vh;
 }
 
 p, h5 {
@@ -44,3 +48,6 @@ p, h5 {
   color: white;
 }
 
+.h-40 {
+  height: 40%;
+}
