@@ -12,6 +12,18 @@
   }
 }
 
+@media only screen and (max-width: 850px) and (orientation : landscape) {
+  .hero {
+    background-size: 100% auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .hero {
+    background-attachment: scroll;
+  }
+}
+
 @media (max-width: 480px) {
   .hero {
     padding: 50% 5% 0% 5%;
@@ -22,4 +34,8 @@
   }
 }
 
-
+@media (hover: none) {
+  .hero {
+    background-attachment: scroll;
+  }
+}
