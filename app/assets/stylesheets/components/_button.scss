@@ -5,7 +5,6 @@
   --bg-color: #2e2e2c;
 }
 
-
 button, .btn-tipsy {
   position:relative;
   padding: 10px 20px;
@@ -72,16 +71,18 @@ button::after{
   transform: translate(0, -90%) rotate(0deg)
 }
 
-button:hover .right::after {
-  transform: translate(0, -47%) rotate(0deg)
-}
+@media (hover: hover) {
+  button:hover .right::after {
+    transform: translate(0, -47%) rotate(0deg)
+  }
 
-button .right:hover::after {
-  transform: translate(0, -50%) rotate(-7deg)
-}
+  button .right:hover::after {
+    transform: translate(0, -50%) rotate(-7deg)
+  }
 
-button .left:hover ~ .right::after {
-  transform: translate(0, -50%) rotate(7deg)
+  button .left:hover ~ .right::after {
+    transform: translate(0, -50%) rotate(7deg)
+  }
 }
 
 /* bubbles */
