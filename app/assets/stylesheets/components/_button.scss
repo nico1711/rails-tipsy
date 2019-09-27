@@ -111,3 +111,10 @@ button::before {
     transform: translate(0, -66.666%);
   }
 }
+
+@media (max-width: 768px) {
+  .simple_form .btn-tipsy{
+    width: 100%;
+  }
+}
+
