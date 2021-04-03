@@ -47,7 +47,7 @@ gem 'simple_form'
 gem 'dotenv-rails', groups: [:development, :test]
 
 # For the picture storage and upload
-gem 'carrierwave', '~> 1.2'
+gem 'carrierwave', '~> 1.3'
 gem 'cloudinary', '~> 1.9.1'
 
 group :development, :test do
